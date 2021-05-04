@@ -30,6 +30,20 @@ void main() {
               equals(_counterValueBeforeIncrease + 1));
         },
       );
+
+      test(
+        "counter is decreased by 1 after running decrementCounter",
+        () {
+          final HomeController _homeController = HomeController();
+
+          final int _counterValueBeforeDecrease = _homeController.counter.value;
+
+          _homeController.decrementCounter();
+
+          expect(_homeController.counter.value,
+              equals(_counterValueBeforeDecrease - 1));
+        },
+      );
     },
   );
 }

@@ -7,4 +7,8 @@ class HomeController extends GetxController {
   void incrementCounter() {
     _counter++;
   }
+
+  void decrementCounter() {
+    _counter--;
+  }
 }

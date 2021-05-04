@@ -19,13 +19,27 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _homeController.incrementCounter();
-        },
-        child: Icon(
-          Icons.add,
-        ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          FloatingActionButton(
+            onPressed: () {
+              _homeController.incrementCounter();
+            },
+            child: Icon(
+              Icons.add,
+            ),
+          ),
+          const SizedBox(width: 15),
+          FloatingActionButton(
+            onPressed: () {
+              _homeController.decrementCounter();
+            },
+            child: Icon(
+              Icons.remove,
+            ),
+          ),
+        ],
       ),
     );
   }
